@@ -1,0 +1,54 @@
+   
+
+
+    .contenedor-anuncio{
+        @include grid(3,2rem);
+    }
+
+    @include tablet{
+        .contenedor-anuncio{
+           display: grid;
+           grid-template-columns: repeat(2,1fr)
+        }
+      
+    }
+
+    @include telefono{
+        .contenedor-anuncio{
+            @include grid(1,3rem);
+        }
+    }
+
+    .anuncio{
+        background-color: lighten($gris,5);  
+        border: 2px solid $gris;
+
+        .contenido-anuncio{
+            padding: 2rem;
+        }
+
+        h3,p{
+            margin: 0;
+        }
+        
+       }
+
+
+       .precio{
+        color: $verde;
+    } 
+       .icono-anuncio{
+           display: flex;
+           text-decoration: none;
+           list-style: none;
+           padding: 0;
+           
+           li{
+              flex: 1;
+              display: flex;
+           }
+           img{
+               flex: 0 0 4rem;
+               margin-right: 1rem;
+           }
+       }

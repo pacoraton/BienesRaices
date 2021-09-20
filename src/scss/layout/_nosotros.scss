@@ -1,0 +1,16 @@
+.seccion-nosotros{
+    @include grid(2, 2rem);
+    text-align: justify;
+}
+
+@include tablet{
+    .seccion-nosotros{
+        display: block;
+    }
+}
+
+blockquote{
+    font-size: 2.2rem;
+    font-weight: $black;
+    margin: 0;
+}
