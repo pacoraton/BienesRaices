@@ -1,41 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BienesRaices</title>
-    <link rel="stylesheet" href="build/css/app.css">
-</head>
-<body>
-
-    <header class="header inicio">
-        <div class="contenedor contenido-header">
-            <div class="barra">
-                <a href="index.html" >
-                    <img src="build/img/logo.svg" alt="Logo de Bienes Raices">
-                </a>
-
-                <div class="menu-mobile">
-                    <img src="build/img/barras.svg"  alt="menu responsive">
-                </div>
-     
-                <div class="derecha">
-                    <img  class="dark-mode-boton"  src="build/img/dark-mode.svg" alt="modo oscuro">
-                    <nav class="nav-header">
-                        <a href="nosotros.html">Nosotros</a>
-                        <a href="anuncios.html">Anuncios</a>
-                        <a href="blog.html">Blog</a>
-                        <a href="contactos.html">Contactos</a>
-                    </nav>
-                </div>
-                
-               
-            </div><!--.barra-->
-            
-            <h1>Venta de casas y Departamentos Exclusivos de Lujo</h1>
-        </div>  
-    </header>
+<?php 
+require 'build/includes/funciones.php';
+incluirTemplate('header',$inicio=true);
+?>
     
     <main class="contenedor seccion">
         <h1>Mas sobre Nosotros</h1>
@@ -233,20 +199,4 @@
         </section>
     </div>
     
-
-    <footer class="footer seccion">
-       <div class="contenedor contenedor-footer">
-            <nav class="nav-header">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="anuncios.html">Anuncios</a>
-                <a href="blog.html">Blog</a>
-                <a href="contactos.html">Contactos</a>
-            </nav>
-       </div> 
-        <p class="copyright">Todos los derechos Reservados &copy;</p>
-    </footer>
-
-    <script src="build/js/bundle.min.js"></script>
-    
-</body>
-</html>
+    <?php incluirTemplate('footer'); ?>    

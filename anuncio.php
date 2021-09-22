@@ -1,44 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BienesRaices</title>
-    <link rel="stylesheet" href="build/css/app.css">
-</head>
-<body>
-
-    <header class="header">
-        <div class="contenedor contenido-header">
-            <div class="barra">
-                <a href="index.html" >
-                    <img src="build/img/logo.svg" alt="Logo de Bienes Raices">
-                </a>
-
-                <nav class="nav-header">
-                    <a href="nosotros.html">Nosotros</a>
-                    <a href="anuncios.html">Anuncios</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contactos.html">Contactos</a>
-                </nav>
-               
-            </div><!--.barra-->     
-        </div>  
-    </header>
-    
+<?php 
+    require 'build/includes/funciones.php';
+    incluirTemplate('header');
+?>
+   
     <main class="contenedor seccion contenido-centrado">
-        <h1>Guia para la decoración de tu hogar</h1>
+        <h1>Casa de Lujo en el Lago</h1>
         <picture>
-            <source srcset="build/img/blog1.webp" type="image/webp">
-            <source srcset="build/img/blog1.jpg" type="image/jepg">
-            <img src="build/img/blog1.jpg" alt="Imagen Blog">
+            <source srcset="build/img/destacada.webp" type="image/webp">
+            <source srcset="build/img/destacada.jpg" type="image/jepg">
+            <img src="build/img/anuncio1destacada.jpg" alt="imagen propiedad">
         </picture>
 
-        <div class="resumen-blog">
+        <div class="resumen-propiedad">
+            <p class="precio">Precio:$3,000,000</p>
 
-            <p class="quotes">Escrito el <span>16/09/2021</span> por: <span>Admin</span></p>
-            
+            <ul class="icono-anuncio">
+                <li>
+                    <img loading="lazy" src="build/img/icono_wc.svg" alt="icono_baño">
+                    <p>3</p>
+                </li>
+                <li>
+                    <img loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono_estacionamiento">
+                    <p>2</p>
+                </li>
+                <li>
+                    <img loading="lazy" src="build/img/icono_dormitorio.svg" alt="Habitaciones">
+                    <p>4</p>
+                </li>
+            </ul>
+
             <p>
                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis expedita unde soluta dicta
             nostrum ullam ad. Obcaecati iure nam odit molestiae hic nihil nulla unde facilis quasi facere dicta
@@ -61,27 +51,7 @@
             quae cumque vitae suscipit deserunt! Nulla at ea necessitatibus ex sunt?  
             </p>
         </div>
+
+        <p></p>
     </main>
-    
-
-    <footer class="footer seccion">
-       <div class="contenedor contenedor-footer">
-            <nav class="nav-header">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="anuncios.html">Anuncios</a>
-                <a href="blog.html">Blog</a>
-                <a href="contactos.html">Contactos</a>
-            </nav>
-       </div> 
-        <p class="copyright">Todos los derechos Reservados &copy;</p>
-    </footer>
-    
-            
-      
-
-    
-    
-
-    <script src="build/js/bundle.min.js"></script>
-</body>
-</html>
+    <?php incluirTemplate('footer'); ?>    

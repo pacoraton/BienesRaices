@@ -1,32 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BienesRaices</title>
-    <link rel="stylesheet" href="build/css/app.css">
-</head>
-<body>
-
-    <header class="header">
-        <div class="contenedor contenido-header">
-            <div class="barra">
-                <a href="index.html" >
-                    <img src="build/img/logo.svg" alt="Logo de Bienes Raices">
-                </a>
-
-                <nav class="nav-header">
-                    <a href="nosotros.html">Nosotros</a>
-                    <a href="anuncios.html">Anuncios</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contactos.html">Contactos</a>
-                </nav>
-               
-            </div><!--.barra-->
-
-        </div>  
-    </header>
+<?php 
+    require 'build/includes/funciones.php';
+    incluirTemplate('header');
+?>
+   
     
     <main class="contenedor seccion">
         <section class="contenedor seccion">
@@ -206,24 +182,4 @@
                 </div> <!--Fin contenedor anuncio-->  
     </main>
 
-    <footer class="footer seccion">
-       <div class="contenedor contenedor-footer">
-            <nav class="nav-header">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="anuncios.html">Anuncios</a>
-                <a href="blog.html">Blog</a>
-                <a href="contactos.html">Contactos</a>
-            </nav>
-       </div> 
-        <p class="copyright">Todos los derechos Reservados &copy;</p>
-    </footer>
-    
-            
-      
-
-    
-    
-
-    <script src="build/js/bundle.min.js"></script>
-</body>
-</html>
+    <?php incluirTemplate('footer'); ?>    
