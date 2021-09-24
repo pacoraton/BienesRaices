@@ -112,7 +112,7 @@
 
             if($resultado){
                     //Redireccion a usuario
-                    header('Location:/admin');   
+                    header('Location:/admin?resultado=1');   
 
                 }else{
                     echo "Error en el registro";

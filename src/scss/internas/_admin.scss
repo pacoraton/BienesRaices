@@ -7,8 +7,11 @@
     text-align: center;
 
     &.error{
-
         background-color: red;
-        
     }
+    &.exito{
+        background-color: $verde !important;
+    }
+   
 }
+
