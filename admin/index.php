@@ -55,7 +55,7 @@
                 <td>$<?php echo  $propiedades['precio']; ?></td>
                 <td>
                     <a href="#" class="boton boton-rojo">Eliminar</a>
-                    <a href="#" class="boton boton-amarillo">Actualizar</a>
+                    <a href="/admin/propiedades/actualizar.php?id=<?php echo $propiedades['id']; ?>" class="boton boton-amarillo">Actualizar</a>
                 </td>
             </tr>
 
