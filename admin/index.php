@@ -27,7 +27,10 @@
         <?php
             if($resultado==1){?>
             <div class="alerta exito">Se ha registrado Correctamente </div>
-       <?php }
+       <?php }else if($resultado==2){ ?>
+        <div class="alerta exito">Se ha Actualizado Correctamente </div>
+<?php
+       }
         ?>
     <a href="/admin/propiedades/crear.php" class=" boton boton-verde">Nueva Propiedad</a>
 

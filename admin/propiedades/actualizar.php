@@ -35,7 +35,7 @@
     $wc=$propiedad['wc'];
     $estacionamiento=$propiedad['estacionamiento'];
     $id_vendedor=$propiedad['id_vendedor'];
-    $imagen=$propiedad['imagen'];
+    
 
     //Ejecuta el codigo despues de que el usuario envia el formulario
         if($_SERVER["REQUEST_METHOD"]=== "POST"){
@@ -81,10 +81,6 @@
             $errores[]="Agrega el vendedor";
         }
 
-        if(!$imagen['name'] || $imagen['error']){
-            $errores[]="Debes agregar una imagen";
-        }
-
         //validar por tamaño de imagen
         
         $tamaño=1000 *1000;
@@ -116,19 +112,16 @@
             //Subir la imagen
             move_uploaded_file($imagen['tmp_name'],$carpeta_imagenes . $nombreUnico);
 
-            //Insertar a la base de datos
-            $query="Insert into propiedades (titulo, precio,imagenes,descripcion,habitaciones,wc,estacionamiento,creado,id_vendedor)
-            values ('$titulo','$precio','$nombreUnico','$descripcion','$habitaciones','$wc','$estacionamiento','$creado','$id_vendedor');";
-
-            //echo $query;
-
+            //Actualizar a la base de datos
+              $query="UPDATE propiedades set titulo='${titulo}', precio=${precio},descripcion='${descripcion}',
+                    habitaciones=${habitaciones},wc=${wc},estacionamiento=${estacionamiento} where id=${id} ";
 
             //Resultado query       
             $resultado=mysqli_query($db,$query);
 
             if($resultado){
                     //Redireccion a usuario
-                    header('Location:/admin?resultado=1');   
+                    header('Location:/admin?resultado=2');   
 
                 }else{
                     echo "Error en el registro";
@@ -150,7 +143,7 @@
 ?>
 
 <main class="contenedor seccion">
-    <h1>Actualizar Propiedad</h1>
+    <h1>Actualizar Propiedades</h1>
 
     <a href="/admin" class=" boton boton-verde">Volver</a> 
 
