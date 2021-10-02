@@ -94,7 +94,8 @@
         if(empty($errores)){
 
 
-            //---Subida de archivos---
+            //---Subida de archivos---//
+
 
             //ruta
             $carpeta_imagenes="../../imagenes/";
@@ -104,16 +105,31 @@
                 mkdir($carpeta_imagenes);
             }
 
-            //Generar un nombre unico 
-            $nombreUnico=md5(uniqid(rand(),true)). ".jpg";
+
+           $nombreUnico=""; 
+
+            //**subir imagen actualizada */
+
+            if($imagen['name']){
+                //eliminar imagen previa
+                unlink($carpeta_imagenes.$propiedad['imagenes']);
+
+
+               //Generar un nombre unico 
+                $nombreUnico=md5(uniqid(rand(),true)). ".jpg";
 
 
 
             //Subir la imagen
-            move_uploaded_file($imagen['tmp_name'],$carpeta_imagenes . $nombreUnico);
+            move_uploaded_file($imagen['tmp_name'],$carpeta_imagenes . $nombreUnico); 
+            }else{
+                $nombreUnico=$propiedad['imagenes'];
+            }
+
+            
 
             //Actualizar a la base de datos
-              $query="UPDATE propiedades set titulo='${titulo}', precio=${precio},descripcion='${descripcion}',
+              echo $query="UPDATE propiedades set titulo='${titulo}', precio=${precio},imagenes='${nombreUnico}', descripcion='${descripcion}',
                     habitaciones=${habitaciones},wc=${wc},estacionamiento=${estacionamiento} where id=${id} ";
 
             //Resultado query       
