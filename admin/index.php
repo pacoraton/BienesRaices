@@ -1,4 +1,6 @@
-<?php 
+<?php
+  
+
     //Importar conexion
     require '../build/includes/config/db.php';
     $db=conectarDB();
@@ -14,6 +16,23 @@
 
     //Muestra mensaje consicional
     $resultado=$_GET['resultado'] ?? null;
+
+    if($_SERVER['REQUEST_METHOD']==='POST'){
+        $ID=$_POST('id');
+        $ID=filter_var($ID,FILTER_VALIDATE_INT);
+
+        if($ID){
+            $query="DELETE FROM propiedades where id=${id};";
+
+            $resultado=mysqli_query($db,$query);
+
+            if($resultado){
+                header('location:/admin');
+            }
+        }
+    }
+
+
 
     //incluye un tamplate
     require '../build/includes/funciones.php';
@@ -57,7 +76,13 @@
                 <td><img src="/imagenes/<?php echo $propiedades['imagenes']; ?>" class="imagen-tabla"></td>
                 <td>$<?php echo  $propiedades['precio']; ?></td>
                 <td>
-                    <a href="#" class="boton boton-rojo">Eliminar</a>
+                    <form method="POST" >
+
+                      <input type="hidden" name="id" value="<?php echo $propiedades['id'];?>" >  
+                      <input type="submit" class="boton-rojo" value="Eliminar">
+                    </form>
+                    
+                    
                     <a href="/admin/propiedades/actualizar.php?id=<?php echo $propiedades['id']; ?>" class="boton boton-amarillo">Actualizar</a>
                 </td>
             </tr>
