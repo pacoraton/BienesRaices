@@ -36,105 +36,16 @@ incluirTemplate('header',$inicio=true);
         </div>
     </main>
  
-    <section class="contenedor seccion">
-        <h2>Venta de Casas y Departamentos</h2>
+    <?php
 
-            <div class="contenedor-anuncio">     
-                <div class="anuncio">
-                    <picture>
-                        <source srcset="build/img/anuncio1.webp" type="image/webp">
-                        <source srcset="build/img/anuncio1.jpg" type="image/jpg">
-                        <img loading="lazy" src="build/img/anuncio1.jpg" alt="anuncio">  
-                    </picture>
-                    <div class="contenido-anuncio">
-                        <h3>Casa de Lujo en el Lago</h3>
-                        <p>Casa al lado del lago con acabados de lujo a excelente precio </p>
-                        <p class="precio">$3000000</p>
-                        <ul class="icono-anuncio">
-                            <li>
-                                <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono_baño">
-                                <p>3</p>
-                            </li>
-                            <li>
-                                <img class="icono" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono_estacionamiento">
-                                <p>2</p>
-                            </li>
-                            <li>
-                                <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="Habitaciones">
-                                <p>4</p>
-                            </li>
-                        </ul>
-                        <a class="boton boton-amarillo" href="anuncio.html">Ir al anuncio</a>
-                    </div><!--Fin contenido anuncio-->
-                </div><!--fin anuncio-->
+    include 'build/includes/templates/anuncios.php';
 
-               <div class="anuncio">
-                    <picture>
-                        <source srcset="build/img/anuncio2.webp" type="image/webp">
-                        <source srcset="build/img/anuncio2.jpg" type="image/jpg">
-                        <img loading="lazy" src="build/img/anuncio1.jpg" alt="anuncio">  
-                    </picture>
-                    <div class="contenido-anuncio">
-                        <h3>Casa con acabados de lujo</h3>
-                        <p>Casa al lado del lago con acabados de lujo a excelente precio </p>
-                        <p class="precio">$3000000</p>
-                        <ul class="icono-anuncio">
-                            <li>
-                                <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono_baño">
-                                <p>3</p>
-                            </li>
-                            <li>
-                                <img class="icono" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono_estacionamiento">
-                                <p>2</p>
-                            </li>
-                            <li>
-                                <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="Habitaciones">
-                                <p>4</p>
-                            </li>
-                        </ul>
-                        <a class="boton boton-amarillo" href="anuncio.html">Ir al anuncio</a>
-                    </div><!--Fin contenido anuncio-->
-                </div><!--fin anuncio-->
-                
-                <div class="anuncio">
-                    <picture>
-                        <source srcset="build/img/anuncio3.webp" type="image/webp">
-                        <source srcset="build/img/anuncio3.jpg" type="image/jpg">
-                        <img loading="lazy" src="build/img/anuncio1.jpg" alt="anuncio">  
-                    </picture>
-                    <div class="contenido-anuncio">
-                        <h3>Casa con alberca</h3>
-                        <p>Casa al lado del lago con acabados de lujo a excelente precio </p>
-                        <p class="precio">$3000000</p>
-                        <ul class="icono-anuncio">
-                            <li>
-                                <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono_baño">
-                                <p>3</p>
-                            </li>
-                            <li>
-                                <img class="icono" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono_estacionamiento">
-                                <p>2</p>
-                            </li>
-                            <li>
-                                <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="Habitaciones">
-                                <p>4</p>
-                            </li>
-                        </ul>
-                        <a class="boton boton-amarillo" href="anuncio.html">Ir al anuncio</a>
-                    </div><!--Fin contenido anuncio-->
-                </div><!--fin anuncio-->
-
-            </div> <!--Fin contenedor anuncio-->  
-            
-            <div class="alinear-derecha">
-                <a class="boton-verde" href="anuncios.html">Ver todos</a>
-            </div>
-    </section>
+    ?>
 
     <section class="imagen-contacto">
         <h3>Encuentra la casa de tus sueños</h3>
         <p>Llena el formulario de contacto y un asesor se pondra en contacto contigo a la brevedad</p>
-        <a class="boton-amarillo-inline" href="contactos.html">Contactanos</a>
+        <a class="boton-amarillo-inline" href="contactos.php">Contactanos</a>
     </section>
 
 
