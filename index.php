@@ -37,10 +37,14 @@ incluirTemplate('header',$inicio=true);
     </main>
  
     <?php
+    $limite=3;
 
     include 'build/includes/templates/anuncios.php';
-
     ?>
+     <div class="alinear-derecha">
+                <a class="boton-verde" href="anuncios.php">Ver todos</a>
+            </div>
+    </section>
 
     <section class="imagen-contacto">
         <h3>Encuentra la casa de tus sueños</h3>

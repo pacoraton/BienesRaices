@@ -4,7 +4,7 @@
     //base de datos
     $db=conectarDB();
 
-    $limite=3;
+    
     //consulta
     $consulta="Select * from propiedades limit ${limite}";
 
@@ -51,7 +51,4 @@
 
             </div> <!--Fin contenedor anuncio-->  
             
-            <div class="alinear-derecha">
-                <a class="boton-verde" href="anuncios.php">Ver todos</a>
-            </div>
-    </section>
+           
