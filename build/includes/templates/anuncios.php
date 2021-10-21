@@ -43,7 +43,7 @@
                                 <p><?php echo $propiedad['habitaciones'] ?></p>
                             </li>
                         </ul>
-                        <a class="boton boton-amarillo" href="anuncio.php">Ir al anuncio</a>
+                        <a class="boton boton-amarillo" href="anuncio.php?id=<?php echo $propiedad['id']; ?>">Ir al anuncio</a>
                     </div><!--Fin contenido anuncio-->
                 </div><!--fin anuncio-->
           

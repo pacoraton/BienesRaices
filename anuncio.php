@@ -1,6 +1,28 @@
 <?php 
-    require 'build/includes/funciones.php';
-    incluirTemplate('header');
+
+
+require 'build/includes/funciones.php';
+incluirTemplate('header');
+
+//conexion db
+require 'build/includes/config/db.php';
+$db=conectarDB();
+
+if($_SERVER['REQUEST_METHOD']==='POST'){
+    $ID=$_POST['id'];
+    $ID=filter_var($ID,FILTER_VALIDATE_INT);
+
+    if($ID){
+
+        
+       //consulta
+         $consulta="Select * from propiedades where id =${ID}";
+       //Resultado
+        $resultado=mysqli_query($db,$consulta);  
+
+        $propiedad=mysqli_fetch_assoc($res);
+    }
+}
 ?>
    
     <main class="contenedor seccion contenido-centrado">
